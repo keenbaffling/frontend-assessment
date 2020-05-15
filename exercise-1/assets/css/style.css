@@ -1,0 +1,120 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.hero {
+  align-items: center;
+  background-image: url(http://via.placeholder.com/600x600);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding: 1em;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: url(http://via.placeholder.com/1920x650);
+    height: 40.625rem;
+  }
+}
+
+.hero::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.hero__content {
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero__heading {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero__subheading {
+  font-size: 1.5rem;
+}
+
+.card__list {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -0.9375rem;
+}
+
+.card__item {
+  margin: 0 auto 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .card__item {
+    max-width: 27.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .card__item {
+    max-width: 33.33%;
+  }
+}
+
+.card__content {
+  border-radius: 0.5em;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15), 0 0 4px rgba(0, 0, 0, 0.1);
+  flex: 100%;
+  padding: 1.25rem;
+}
+
+.card__thumbnail {
+  margin-bottom: 1.5rem;
+}
+
+.card__feat-img {
+  border-radius: 0.3125em;
+}
+
+.card__main {
+  text-align: center;
+}
+
+.card__footer {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.card__link {
+  border: 0.1875em solid currentColor;
+  border-radius: 2em;
+  color: #333;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.card__link:hover {
+  text-decoration: none;
+}
