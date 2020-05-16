@@ -13,11 +13,16 @@ interface Props {
   setCurrentItem: (index: number) => void;
 }
 
+/**
+ * Holds all accordion display.
+ */
 export const Accordion: React.FC<Props> = ({
   items,
   currentItem,
   setCurrentItem,
 }) => {
+  // Click event item toggling and closing previously opened item.
+  // Clicking the same opened item will close itself.
   const onClick = (i: number) => {
     if (i === currentItem) {
       setCurrentItem(-1);

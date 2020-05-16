@@ -19,7 +19,8 @@ export const Tabs: React.FC<Props> = ({
   currentItem,
   setCurrentItem,
 }) => {
-  const nav = items.map((item: Tab, i) => (
+  // Iterate list of tab navigation items and set each item state.
+  const nav = items.map((item: Tab, i: number) => (
     <Nav
       active={i === currentItem}
       title={item.title}

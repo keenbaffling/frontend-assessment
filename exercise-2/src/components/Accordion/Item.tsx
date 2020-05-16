@@ -8,10 +8,16 @@ interface Props {
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
+/**
+ * Holds all item contents for each accordion component
+ */
 export const Item: React.FC<Props> = ({ active, title, content, onClick }) => {
+  // React recommended way of referencing dynamic node elements which will be used on toggling event.
   const panelRef = useRef<HTMLDivElement>(null);
+  // State for setting accordion dynamic item height based on contents.
   const [height, setHeight] = useState(0);
 
+  // Assign item content height whenever toggling occurs.
   useLayoutEffect(() => {
     if (!panelRef.current || !active) {
       setHeight(0);
